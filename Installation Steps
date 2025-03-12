@@ -3,5 +3,5 @@
 Run the following command:  
 
 ```
-bash
 sudo apt update && sudo apt install -y docker.io
+```
