@@ -24,7 +24,13 @@ docker -v
 docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube:lts-community
 ```
 
-## Step-5: Enable 9000 port number in Security Group Inbound Rules & Access Sonar Server
+## Step-5 : Enable 9000 port number in Security Group Inbound Rules & Access Sonar Server
 ```
  - URL : http://public-ip:9000/
+```
+
+## Step-6 : Credentials
+```
+Username : admin
+Password : admin
 ```
