@@ -50,3 +50,53 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 	   
 ## Step-8 : Create Admin Account & Install Required Plugins in Jenkins ##
+
+--------------------------------------------------------------------------------
+
+# **Jenkins Server Setup in Linux VMware Workstation**
+
+## **Step - 1: Create CentOS VM**
+1. Create a CentOS VM in VMware Workstation (VM should be CentOS(server with GUI))
+2. Enable Port **8080** in the Firewall for External Access
+3. Use the Inbuilt Browser in VM or Access from Host Machine
+
+
+## **Step - 2: Install Java**
+```
+sudo dnf update -y
+sudo yum install fontconfig java-17-openjdk -y
+java -version
+```
+
+## **Step - 3: Install Jenkins**
+```
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+sudo yum upgrade -y
+sudo yum install jenkins -y
+```
+
+
+## **Step - 4: Start and Enable Jenkins**
+```
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+sudo systemctl status jenkins
+```
+
+
+## **Step - 5: Configure Firewall (For External Access)**
+```
+sudo firewall-cmd --permanent --zone=public --add-port=8080/tcp
+sudo firewall-cmd --reload
+```
+
+
+## **Step - 6: Access Jenkins**
+- **Inside VM:** Open a browser and visit → `http://localhost:8080`
+
+To get the **initial admin password**, run:
+```
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+``` 
