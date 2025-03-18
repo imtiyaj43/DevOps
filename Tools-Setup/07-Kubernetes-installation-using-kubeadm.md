@@ -14,6 +14,7 @@ sudo swapoff -a
 ```
 sudo vi /etc/fstab
 ```
-#Comment the line : UUID=<some-uuid> none swap sw 0 
+Comment the line : UUID=<some-uuid> none swap sw 0 
 (If Not show above line, No problem)
 
+## Step 3 : Run
