@@ -13,7 +13,7 @@ sudo swapoff -a
 ## Step 2 : Disable Swap Permanently
 ```
 sudo vi /etc/fstab
-
-### #Comment the line : UUID=<some-uuid> none swap sw 0 
-(If Not show above line, No problem)
 ```
+#Comment the line : UUID=<some-uuid> none swap sw 0 
+(If Not show above line, No problem)
+
