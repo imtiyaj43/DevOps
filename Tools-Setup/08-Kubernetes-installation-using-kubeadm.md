@@ -36,4 +36,41 @@ sudo vi /etc/fstab
 Comment the line : UUID=<some-uuid> none swap sw 0
 (If Not show above line, No problem)
 
-## Step 3 : Run
+## Step 3 : Run on Both Master and Worker Nodes
+
+### 1. Update and upgrade packages:
+
+```
+sudo apt update && sudo apt upgrade -y
+```
+
+### 2. Check if a reboot is required:
+
+```
+sudo cat /var/run/reboot-required
+```
+
+If required, reboot the system(sudo systemctl reboot).
+
+### 3. Load necessary kernel modules:
+
+```
+sudo tee /etc/modules-load.d/containerd.conf <<EOF
+overlay
+br_netfilter
+EOF
+
+
+sudo modprobe overlay
+sudo modprobe br_netfilter
+```
+
+### 4.Configure Networking:
+
+```
+sudo tee /etc/sysctl.d/99-kubernetes-cri.conf <<EOF
+net.bridge.bridge-nf-call-iptables  = 1
+net.ipv4.ip_forward                 = 1
+net.bridge.bridge-nf-call-ip6tables = 1
+EOF
+```
