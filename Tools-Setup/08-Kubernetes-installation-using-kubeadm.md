@@ -65,7 +65,7 @@ sudo modprobe overlay
 sudo modprobe br_netfilter
 ```
 
-### 4. Configure Networking:
+### 3.1. Configure Networking:
 
 ```
 sudo tee /etc/sysctl.d/99-kubernetes-cri.conf <<EOF
@@ -77,9 +77,9 @@ EOF
 sudo sysctl --system
 ```
 
-### 5. Install containerd on All Nodes
+### 4. Install containerd on both Master and worker
 
-### 5.1. Set up Docker's apt repository:
+### 4.1. Set up Docker's apt repository:
 
 ```
 # Add Docker's official GPG key:
@@ -97,14 +97,38 @@ echo \
 sudo apt-get update
 ```
 
-### 5.2. Install the Docker packages:
+### 4.2. Install the Docker packages:
 
 ```
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-### 5.3. Verify installation :
+### 4.3. Verify installation :
 
 ```
 sudo systemctl status containerd
+```
+
+### 4.4. Configure containerd:
+
+```
+sudo mkdir -p /etc/containerd
+sudo containerd config default > /etc/containerd/config.toml
+```
+
+### 4.5. Update configuration:
+
+```
+sudo sed -i 's/SystemdCgroup = false/SystemdCgroup = true/g' /etc/containerd/config.toml
+sudo systemctl restart containerd
+```
+
+### 4.6. Create crictl configuration file:
+
+```
+sudo tee /etc/crictl.yaml <<EOF
+runtime-endpoint: unix:///run/containerd/containerd.sock
+image-endpoint: unix:///run/containerd/containerd.sock
+timeout: 2
+EOF
 ```
