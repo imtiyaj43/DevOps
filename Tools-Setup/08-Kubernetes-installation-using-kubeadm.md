@@ -15,6 +15,10 @@ In a Kubernetes cluster, you will encounter two categories of nodes:
 
 ### 4. Swap Memory : Disable
 
+### 5. Instance Type : t2.medium
+
+### 6. Create 1 Master node and 2 Worker node (based on your usage requirements.)
+
 ## Step 1 : Disable Swap Temporarily
 
 ```
