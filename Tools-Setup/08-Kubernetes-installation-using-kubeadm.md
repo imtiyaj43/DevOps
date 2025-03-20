@@ -19,9 +19,7 @@ In a Kubernetes cluster, you will encounter two categories of nodes:
 
 ### 6. Create 1 Master node and 2 Worker node (based on your usage requirements.)
 
-### 7. Security Ports :
-
-![alt text](image.png)
+### 7. Security Ports : Master Node {API Server(6443), Kubelet(10250), ETCD(2379), Scheduler(10251), Controller-Manager(10252)}, Worker Node{Kubelet(10250), Services(30000-32767)}
 
 ## Step 1 : Disable Swap Temporarily
 
