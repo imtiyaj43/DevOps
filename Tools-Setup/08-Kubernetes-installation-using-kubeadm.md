@@ -19,6 +19,10 @@ In a Kubernetes cluster, you will encounter two categories of nodes:
 
 ### 6. Create 1 Master node and 2 Worker node (based on your usage requirements.)
 
+### 7. Security Ports :
+
+![alt text](image.png)
+
 ## Step 1 : Disable Swap Temporarily
 
 ```
