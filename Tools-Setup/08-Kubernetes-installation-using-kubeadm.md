@@ -77,7 +77,7 @@ EOF
 sudo sysctl --system
 ```
 
-### 4. Install containerd on both Master and worker
+## Step 4 : Install containerd on both Master and worker
 
 ### 4.1. Set up Docker's apt repository:
 
@@ -133,9 +133,9 @@ timeout: 2
 EOF
 ```
 
-## Step 4 : Install Kubernetes Packages on All Nodes
+## Step 5 : Install Kubernetes Packages on All Nodes
 
-### 4.1 : Update the apt package index and install packages needed to use the Kubernetes apt repository:
+### 5.1 : Update the apt package index and install packages needed to use the Kubernetes apt repository:
 
 ```
 sudo apt-get update
@@ -143,21 +143,21 @@ sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl gpg
 ```
 
-### 4.2 : Download the public signing key for the Kubernetes package repositories.
+### 5.2 : Download the public signing key for the Kubernetes package repositories.
 
 ```
 sudo mkdir -p -m 755 /etc/apt/keyrings
 curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.32/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 ```
 
-### 4.3 : Add the appropriate Kubernetes apt repository. 
+### 5.3 : Add the appropriate Kubernetes apt repository. 
 
 ```
 # This overwrites any existing configuration in /etc/apt/sources.list.d/kubernetes.list
 echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.32/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
 ```
 
-### 4.4 : Update the apt package index, install kubelet, kubeadm and kubectl, and pin their version:
+### 5.4 : Update the apt package index, install kubelet, kubeadm and kubectl, and pin their version:
 ```
 sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
