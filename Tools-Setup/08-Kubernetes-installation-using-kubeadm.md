@@ -59,8 +59,9 @@ sudo tee /etc/modules-load.d/containerd.conf <<EOF
 overlay
 br_netfilter
 EOF
+```
 
-
+```
 sudo modprobe overlay
 sudo modprobe br_netfilter
 ```
@@ -88,7 +89,8 @@ sudo apt-get install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
-
+```
+```
 # Add the repository to Apt sources:
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
@@ -163,3 +165,30 @@ sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
+### 5.5 : This is installation link of Kubernetes package
+```
+https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+```
+You can choose kubeadm version from the above official documentation.
+
+## Step 6 : Run on Master Node Only
+
+### 6.1 : Enable IP Forwarding
+### 6.1.1 :Check the current value of ip forward:
+```
+sudo cat /proc/sys/net/ipv4/ip_forward
+```
+### 6.1.2 : Enable IP forwarding: Edit the /etc/sysctl.conf file:
+```
+sudo nano /etc/sysctl.conf
+```
+Find the following line and uncomment it (or add it if it doesn't exist):
+```
+net.ipv4.ip_forward=1
+```
+Save and exit the file.
+### 6.1.3 : Apply the changes:
+```
+sudo sysctl -p
+```
+
