@@ -204,19 +204,6 @@ sudo sysctl -p
 sudo kubeadm init --pod-network-cidr=192.168.0.0/16
 ```
 (Save the generated token for worker node joining)
-### 6.3 : Deploy Calico network:
-```
-sudo kubectl create -f https://docs.projectcalico.org/manifests/tigera-operator.yaml
-sudo wget https://docs.projectcalico.org/manifests/custom-resources.yaml
-```
-```
-sudo kubectl apply -f custom-resources.yaml
-```
-### 6.4 : Verify pods:
-```
-sudo watch kubectl get pods --all-namespaces
-```
-Now we can check Kubernetes work or not.
 
 ## Step 7 : Join Worker node
 ```
