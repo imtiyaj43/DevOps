@@ -102,7 +102,7 @@ sudo apt-get update
 ### 4.2. Install the Docker packages:
 
 ```
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 ```
 
 ### 4.3. Verify installation :
@@ -113,16 +113,24 @@ sudo systemctl status containerd
 
 ### 4.4. Configure containerd:
 
+### 4.4.1 : Create the /etc/containerd directory:
 ```
 sudo mkdir -p /etc/containerd
-sudo containerd config default > /etc/containerd/config.toml
 ```
+### 4.4.2 : Generate the default configuration:
 
+```
+sudo containerd config default | sudo tee /etc/containerd/config.toml > /dev/null
+```
 ### 4.5. Update configuration:
 
 ```
 sudo sed -i 's/SystemdCgroup = false/SystemdCgroup = true/g' /etc/containerd/config.toml
+```
+### 4.5.1 :Restart containerd
+```
 sudo systemctl restart containerd
+sudo systemctl enable containerd
 ```
 
 ### 4.6. Create crictl configuration file:
@@ -180,7 +188,7 @@ sudo cat /proc/sys/net/ipv4/ip_forward
 ```
 ### 6.1.2 : Enable IP forwarding: Edit the /etc/sysctl.conf file:
 ```
-sudo nano /etc/sysctl.conf
+sudo vi /etc/sysctl.conf
 ```
 Find the following line and uncomment it (or add it if it doesn't exist):
 ```
@@ -191,4 +199,22 @@ Save and exit the file.
 ```
 sudo sysctl -p
 ```
+### 6.2 : Initialize the Kubernetes cluster:
+```
+sudo kubeadm init --pod-network-cidr=192.168.0.0/16
+```
+(Save the generated token for worker node joining)
+### 6.3 : Deploy Calico network:
+```
+sudo kubectl create -f https://docs.projectcalico.org/manifests/tigera-operator.yaml
+sudo wget https://docs.projectcalico.org/manifests/custom-resources.yaml
+```
+```
+sudo kubectl apply -f custom-resources.yaml
+```
+### 6.4 : Verify pods:
+```
+sudo watch kubectl get pods --all-namespaces
+```
+Now we can check Kubernetes work or not.
 
