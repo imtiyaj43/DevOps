@@ -218,3 +218,21 @@ sudo watch kubectl get pods --all-namespaces
 ```
 Now we can check Kubernetes work or not.
 
+## Step 7 : Join Worker node
+```
+sudo <token-generated-from master-node> --v=5
+```
+## Step 8 : Run below command on the control-plane to see this node join the cluster
+```
+sudo kubectl get nodes
+```
+### 8.1 : If the master node shows error follow below commands on Master Node
+```
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
+### 8.2 :  Now verify again:
+```
+kubectl get nodes
+```
