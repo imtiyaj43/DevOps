@@ -234,5 +234,5 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 ### 8.2 :  Now verify again:
 ```
-kubectl get nodes
+sudo kubectl get nodes
 ```
