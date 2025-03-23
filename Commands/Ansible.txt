@@ -24,5 +24,12 @@ General Syntax for Ansible Ad-Hoc Commands:
 15. ansible-playbook handlers_tags.yml --tags "install" : Executes only the tasks labeled with the tag install.
 16. ansible-playbook handlers_tags.yml --tags "install,copy" : Executes only tasks with the tags install and copy.
 17. ansible-playbook handlers_tags.yml --skip-tags "install" : Skips tasks labeled with the tag install and runs all other tasks.
+18. ansible-vault encrypt <filename.yml> : Prompts you to enter and confirm a password.(Encrypts the specified file to secure sensitive data.)
+19. ansible-vault view <filename.yml> :	Allows you to view the contents of an encrypted file in readable format without editing.
+20. ansible-vault edit <filename.yml> :	Opens the encrypted file for editing. The file is temporarily decrypted for modifications and re-encrypted after saving.
+21. ansible-vault decrypt <filename.yml> : Converts the encrypted file back to plain text.
+22. ansible-vault rekey <filename.yml> : Prompts you to provide the current password and a new password. (Changes the encryption password for the specified file.)
+23. ansible-galaxy init <role_name> : This creates the directory structure for a role.
+	Example: ansible-galaxy init apache : This creates a role named apache with the default structure.
 
- 
+
