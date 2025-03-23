@@ -20,4 +20,9 @@ General Syntax for Ansible Ad-Hoc Commands:
 11. ansible-playbook playbook.yml --step : Run Playbook Step-by-Step
 12. ansible-playbook playbook.yml –check : To dry run the playbook
 13. ansible-playbook playbook.yml --extra-vars "package_name=nginx" : Pass variables from the command line using the --extra-vars flag (Also called Runtime Variable)
-14. 
+14. ansible-playbook handlers_tags.yml --list-tags : Lists all tags used in the playbook.
+15. ansible-playbook handlers_tags.yml --tags "install" : Executes only the tasks labeled with the tag install.
+16. ansible-playbook handlers_tags.yml --tags "install,copy" : Executes only tasks with the tags install and copy.
+17. ansible-playbook handlers_tags.yml --skip-tags "install" : Skips tasks labeled with the tag install and runs all other tasks.
+
+ 
