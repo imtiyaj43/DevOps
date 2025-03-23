@@ -1,0 +1,16 @@
+General Syntax for Ansible Ad-Hoc Commands:
+	ansible [all/group-name/host-name/IP] -m <module> -a <args>
+	[all/group-name/host-name/IP]: Specifies the target hosts (can be all hosts, a group of hosts, a specific hostname, or an IP address).
+	-m <module>: Specifies the module to use (e.g., ping, shell, yum).
+	-a <args>: Provides arguments to the module.
+
+
+
+
+ansible all -m ping : This checks the connectivity to all hosts.
+ansible webservers -m ping : This pings only the hosts in the webservers group.
+ansible all -m shell -a date : This runs the date command on all hosts.
+ansible all -m shell -a update : This runs the update command on all hosts.
+ansible webservers -b -m yum -a "name=httpd" : Install httpd using the yum module on the webservers group (-b: Runs the command with privilege escalation (become sudo)).
+ansible webservers -b -m yum -a "name=git" : Install git using the yum module on the webservers group.
+
