@@ -1,29 +1,27 @@
-
-1.	git init: initialize a new repository in your project folder.
-2.	git clone <repo_url>: clone an existing git repository onto your local machine.
-3.	git branch <new_branch_name>: Create a new branch locally.
-4.	git checkout -b branch_name: Create and switch to a new branch.
-5.	git checkout branch_name: Switch to an existing branch.
-6.	git branch: list all the branches.
-7.	git branch -d <branch_name>: Delete a branch
-8.	git add <file_name>: Stage changes of a file for the next commit.
-9.	git add . : stage all the changes for the next commit.
-10.	git reset <file-name>: Unstage a file, keeping changes in the working directory.
-11.	git reset --hard: Resets everything to a previous commit, erasing all uncommitted changes.
-12.	git commit -m “commit-message”: Commit all tracked changes with a message.
-13.	git commit --amend: Modify the last commit.
-14.	git status: Show the state of your working directory.
-15.	git log: Display a history of all the commits.
-16.	git diff: Show file differences not yet staged.
-17.	git push -u origin <branch-name>: Push the branch to remote repository.
-18.	git stash: temporarily save the changes that you’re not ready to commit.(Commit later)
-19.	git stash pop: Apply and remove stashed changes.
-20.	git merge <branch-name>: combines all branch changes into one branch
-21.	git pull: Fetch and merge remote changes.
-22.	git rebase -i: Rebase interactively, rewrite commit history.
-23.	git show commit-id: Show details about a commit.
-24.	git revert: Undo commits by creating a new commit.
-25.	git remote -v: List the URLs of remote repositories.
-26.	git remote set-url origin <github-url>: Change the URL of the origin remote repository.
-27.	git restore --staged <file-name>: To unstaged files
-
+1.	git init : initialize a new repository in your project folder.
+2.	git clone <repo_url> : clone an existing git repository onto your local machine.
+3.	git branch <new_branch_name> : Create a new branch locally.
+4.	git checkout -b branch_name : Create and switch to a new branch.
+5.	git checkout branch_name : Switch to an existing branch.
+6.	git branch : list all the branches.
+7.	git branch -d <branch_name> : Delete a branch
+8.	git add <file_name> : Stage changes of a file for the next commit.
+9.	git add .  : stage all the changes for the next commit.
+10.	git reset <file-name> : Unstage a file, keeping changes in the working directory.
+11.	git reset --hard : Resets everything to a previous commit, erasing all uncommitted changes.
+12.	git commit -m “commit-message” : Commit all tracked changes with a message.
+13.	git commit --amend : Modify the last commit.
+14.	git status : Show the state of your working directory.
+15.	git log : Display a history of all the commits.
+16.	git diff : Show file differences not yet staged.
+17.	git push -u origin <branch-name> : Push the branch to remote repository.
+18.	git stash : temporarily save the changes that you’re not ready to commit.(Commit later)
+19.	git stash pop : Apply and remove stashed changes.
+20.	git merge <branch-name> : combines all branch changes into one branch
+21.	git pull : Fetch and merge remote changes.
+22.	git rebase -i : Rebase interactively, rewrite commit history.
+23.	git show commit-id : Show details about a commit.
+24.	git revert : Undo commits by creating a new commit.
+25.	git remote -v : List the URLs of remote repositories.
+26.	git remote set-url origin <github-url> : Change the URL of the origin remote repository.
+27.	git restore --staged <file-name> : To unstaged files
