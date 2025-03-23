@@ -7,10 +7,17 @@ General Syntax for Ansible Ad-Hoc Commands:
 
 
 
-ansible all -m ping : This checks the connectivity to all hosts.
-ansible webservers -m ping : This pings only the hosts in the webservers group.
-ansible all -m shell -a date : This runs the date command on all hosts.
-ansible all -m shell -a update : This runs the update command on all hosts.
-ansible webservers -b -m yum -a "name=httpd" : Install httpd using the yum module on the webservers group (-b: Runs the command with privilege escalation (become sudo)).
-ansible webservers -b -m yum -a "name=git" : Install git using the yum module on the webservers group.
-
+1. ansible all -m ping : This checks the connectivity to all hosts.
+2. ansible webservers -m ping : This pings only the hosts in the webservers group.
+3. ansible all -m shell -a date : This runs the date command on all hosts.
+4. ansible all -m shell -a update : This runs the update command on all hosts.
+5. ansible webservers -b -m yum -a "name=httpd" : Install httpd using the yum module on the webservers group (-b: Runs the command with privilege escalation (become sudo)).
+6. ansible webservers -b -m yum -a "name=git" : Install git using the yum module on the webservers group.
+7. ansible-playbook playbook.yml : This executes the playbook.yml file and performs the defined tasks.
+8. ansible-playbook playbook.yml --vv : Run Playbook with Verbose Output (The --vv flag provides detailed logs of the execution process. You can also use -v, --vvv, or --vvvv for varying levels of verbosity.)
+9. ansible-playbook playbook.yml --syntax-check : Check Syntax of the Playbook
+10. ansible-playbook playbook.yml --list-hosts : Displays the list of hosts on which the playbook will run.
+11. ansible-playbook playbook.yml --step : Run Playbook Step-by-Step
+12. ansible-playbook playbook.yml –check : To dry run the playbook
+13. ansible-playbook playbook.yml --extra-vars "package_name=nginx" : Pass variables from the command line using the --extra-vars flag (Also called Runtime Variable)
+14. 
