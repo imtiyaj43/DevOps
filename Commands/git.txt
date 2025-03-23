@@ -24,4 +24,4 @@
 24.	git revert : Undo commits by creating a new commit.
 25.	git remote -v : List the URLs of remote repositories.
 26.	git remote set-url origin <github-url> : Change the URL of the origin remote repository.
-27.	**git restore --staged <file-name>** : To unstaged files
+27.	git restore --staged <file-name> : To unstaged files
