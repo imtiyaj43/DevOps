@@ -1,0 +1,23 @@
+terraform init: Initializes the working directory with provider plugins and backend configuration.
+terraform fmt: Formats Terraform configuration files to the canonical style.
+terraform validate: Validates the configuration files for syntax and logical errors.
+terraform plan: Creates an execution plan showing changes to be made without applying them.
+terraform apply: Applies the changes required to reach the desired state of the configuration.
+terraform apply --auto-approve: Automatically applies changes without prompting for confirmation.
+terraform destroy: Destroys all resources defined in the configuration.
+terraform destroy --auto-approve: Automatically destroys resources without prompting for confirmation.
+terraform workspace show: Displays the currently active workspace.
+terraform workspace list: Lists all available workspaces in the current working directory.
+terraform workspace new <name>: Creates a new workspace with the specified name.
+terraform workspace select <name>: Switches to the specified workspace.
+terraform workspace delete <name>: Deletes the specified workspace.
+terraform state list: Lists all resources managed in the current state file.
+terraform state show <resource>: Displays detailed information about a specific resource in the state file.
+terraform output: Displays values of the output variables defined in the configuration.
+terraform refresh: Updates the state file to reflect the actual state of resources.
+terraform import <resource> <id>: Imports existing infrastructure into Terraform's state file.
+terraform taint <resource>: Marks a resource for destruction and recreation on the next apply.
+terraform untaint <resource>: Removes the taint mark from a resource.
+terraform show: Displays the details of the Terraform state or plan.
+terraform graph: Generates a visual graph of the Terraform configuration.
+
