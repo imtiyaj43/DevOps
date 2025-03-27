@@ -201,9 +201,17 @@ sudo sysctl -p
 ```
 ### 6.2 : Initialize the Kubernetes cluster:
 ```
-sudo kubeadm init --pod-network-cidr=192.168.0.0/16
+sudo kubeadm init --pod-network-cidr=192.168.0.0/16 --kubernetes-version=stable-1.30
 ```
-(Save the generated token for worker node joining)
+(Save the generated token for worker node joining)(It is simply convenient to reuse the given command, although you can regenerate it and create new tokens using the kubeadm token command. The join tokens expire after 24 hours by default.)
+
+### 6.3 : Deploy Calico Network for pod networking:
+```
+sudo kubectl create -f https://docs.projectcalico.org/manifests/tigera-operator.yaml
+sudo wget https://docs.projectcalico.org/manifests/custom-resources.yaml
+sudo kubectl apply -f custom-resources.yaml
+```
+
 
 ## Step 7 : Join Worker node
 ```
