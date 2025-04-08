@@ -16,6 +16,6 @@ Optional step: rename the unzipped file #sudo mv unzipped-file-name new-file-nam
 
 To check if tomcat service is started: copy your public ip from instance and paste in into new tab http://your-public-ip:8080  it should show the default tomcat page.
 
-By default, Apache Tomcat service runs on 8080 port so edit the security group and add custom tcp but Jenkins also run on port 8080.
+By default, Apache Tomcat service runs on 8080 port so edit the security group and add custom tcp.
 
-For this issue Tomcat has a feature to change the connector port, for that follow steps:
+Tomcat has a feature to change the connector port, for that follow steps:
