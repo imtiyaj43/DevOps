@@ -1,4 +1,5 @@
 Refer this Website for installation: https://www.rosehosting.com/blog/how-to-install-tomcat-on-ubuntu-22-04/
+
 Official Tomcat Download link: https://tomcat.apache.org/download-11.cgi (select the tar file)
 1.	Connect your EC2 instance through ssh 
 2.	Update all the packages: #sudo apt update
@@ -10,7 +11,9 @@ Optional step: rename the unzipped file #sudo mv unzipped-file-name new-file-nam
 7.	Go to directory: #cd tomcat9
 8.	Go to bin file: #cd bin
 9.	To start the tomcat service: #sudo ./startup.sh
-To check if tomcat service is started: copy your public ip from instance and paste in into new tab http://<your-public-ip>:8080--------it should show the default tomcat page
+
+To check if tomcat service is started: copy your public ip from instance and paste in into new tab http://your-public-ip:8080--------it should show the default tomcat page.
+
 By default, Apache Tomcat service runs on 8080 port so edit the security group and add custom tcp but Jenkins also run on port 8080.
 
 For this issue Tomcat has a feature to change the connector port, for that follow steps:
