@@ -19,3 +19,9 @@ To check if tomcat service is started: copy your public ip from instance and pas
 By default, Apache Tomcat service runs on 8080 port so edit the security group and add custom tcp.
 
 Tomcat has a feature to change the connector port, for that follow steps:
+
+1.	Go to config file: #cd conf
+2.	Edit the server.xml file: #vi server.xml
+3.	Scroll down to the connector section, by default the port is mapped to 8080 change it to the required port no.
+4.	After that restart the tomcat server in the bin folder.
+
