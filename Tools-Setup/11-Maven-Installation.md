@@ -22,11 +22,13 @@ Five primary and most significant concepts of Maven:
 •	It contains the project description, as well as details regarding the versioning and configuration management of the project
 
 •	The XML file is in the project home directory. Maven searches for the POM in the current directory when any given task needs to be executed
+
 2. Dependencies and Repositories
 
 •	Dependencies refer to the Java libraries required for the project. Repositories refer to the directories of packaged JAR files.
 
 •	If the dependencies are not present in your local repository, then Maven downloads them from a central repository and stores them in the local repository.
+
 3. Build Life Cycles, Phases and Goals
 
 •	This consists of a sequence of build phases, and each build phase consists of a series of goals
@@ -34,6 +36,7 @@ Five primary and most significant concepts of Maven:
 •	Each goal is responsible for a particular task
 
 •	When a process is executed, all related to that phase and its plugins are also compiled
+
 4. Build Profiles
 
 •	This refers to the set of configuration values required to build a project using different configurations
@@ -41,6 +44,7 @@ Five primary and most significant concepts of Maven:
 •	Different build profiles are added to the POM files when enabling different builds
 
 •	A build profile helps in customizing the build for different environments
+
 5. Build Plugins
 
 •	A Maven plugin refers to the group of goals that may or may not be in the same phase
