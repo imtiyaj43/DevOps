@@ -1,24 +1,65 @@
-Whether you're a beginner or a seasoned pro, mastering Linux commands is non-negotiable for any developer or DevOps engineer.
+File and Directory Management
+•	ls : Lists files and directories.
+•	pwd : Shows the current working directory path.
+•	cd : Changes the current directory.
+•	mkdir : Creates a new directory.
+•	touch : Creates an empty file or updates file timestamp.
+•	cp : Copies files or directories.
+•	mv : Moves or renames files or directories.
+•	rm : Deletes files or directories.
 
-Here’s a quick and visually organized cheat sheet of important Linux commands to boost your productivity ⬇️
+File Viewing and Editing
+•	cat : Displays file content.
+•	less : Views file content one page at a time (scrollable).
+•	more : Similar to less, views file content page by page.
+•	nano : Simple command:line text editor.
+•	vim : Advanced command:line text editor.
+•	gedit : GUI:based text editor.
 
-📂 File and Directory Management
-- ls, pwd, cd, mkdir, touch, cp, mv, rm
+Process Management
+•	ps : Lists running processes.
+•	top : Real:time view of system processes.
+•	kill : Sends a signal to terminate a process.
+•	killall : Terminates all processes by name.
+•	pstree : Shows processes in a tree format.
+•	htop : Interactive process viewer (like top with UI).
 
-📝 File Viewing and Editing
-- cat, less, more, nano, vim, gedit
+System Information
+•	uname : Displays system information.
+•	df : Shows disk space usage.
+•	du : Shows file/folder size.
+•	free : Displays memory usage.
+•	lscpu : Displays CPU architecture info.
+•	lsbw : (Typo, probably meant lsb_release) : Shows Linux distro info.
+•	lsblk : Lists information about block devices.
 
-⚙️ Process Management
-- ps, top, kill, killall, pstree, htop
+User and Group Management
+•	passwd : Changes user password.
+•	useradd : Adds a new user.
+•	userdel : Deletes a user.
+•	usermod : Modifies a user account.
+•	groupadd : Creates a new group.
+•	groupdel : Deletes a group.
+•	groups : Shows groups a user belongs to.
+•	id : Shows user and group IDs.
 
-💻 System Information
-- uname, df, du, free, lscpu, lsbw, lsblk
+Network Configuration and Monitoring
+•	ifconfig : Displays or configures network interfaces (older tool).
+•	ip : Replaces ifconfig for network management.
+•	ping : Checks connectivity to another host.
+•	netstat : Displays network connections and stats.
+•	ss : Shows socket statistics (faster replacement for netstat).
+•	traceroute : Tracks path to a remote host.
+•	ssh : Connects to a remote machine securely.
+•	nc : Reads/writes data over network (netcat).
 
-👥 User and Group Management
-- passwd, useradd, userdel, usermod, groupadd, groupdel, groups, id
+Package Management
+•	apt:get / apt : Package manager for Debian/Ubuntu systems.
+•	yum : Package manager for older Red Hat/CentOS systems.
+•	dnf : Improved yum for newer Red Hat:based systems.
+•	rpm : Manages RPM packages directly.
+•	dpkg : Installs/removes .deb packages on Debian:based systems.
+•	snap : Installs and manages snap packages.
+•	zypper : Package manager for openSUSE.
 
-🌐 Network Configuration and Monitoring
-- ifconfig, ip, ping, netstat, ss, traceroute, ssh, nc
 
-📦 Package Management
-- apt-get, apt, yum, dnf, rpm, dpkg, snap, zyper
