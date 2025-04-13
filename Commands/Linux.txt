@@ -13,6 +13,7 @@ File and Directory Management
 	• mkdir : Creates a new directory.
 	• touch : Creates an empty file or updates file timestamp.
 	• cp : Copies files or directories.
+	• scp (system copy) : It will Copy data from one system to another.
 	• mv : Moves or renames files or directories.
 		o mv  <present-name> <new-name>
 		o mv  <present-location>  <new-location>
@@ -59,9 +60,9 @@ Process Management
 	• ps : Lists running processes.
 		o ps -a : List all process on system
 		o ps -aux :
-			 a - running Process under all users
-			 u - detailed information of Particular user
-			 x - all process which is running in background
+			a - running Process under all users
+			u - detailed information of Particular user
+			x - all process which is running in background
 		o ps -lux : Long listing without user lookup
 	• top : Real:time view of system processes.
 	• kill : Sends a signal to terminate a process.
@@ -72,4 +73,46 @@ Process Management
 	• killall : Terminates all processes by name.
 	• pstree : Shows processes in a tree format.
 	• htop : Interactive process viewer (like top with UI).
+
+System Information
+
+	• uname : Displays system information.
+	• ssh-keygen : Generating Public/Private rsa key pair.
+	• df : Shows disk space usage.
+		o df -h : disk usage in human readable format
+	• du : Shows file/folder size.
+		o du -sh : summarize in human readable format
+	• free : Displays memory usage.
+	• lscpu : Displays CPU architecture info.
+	• lsblk : Lists information about block devices.
+
+User and Group Management
+	• passwd : Changes user password.
+	• useradd : Adds a new user.
+	• userdel : Deletes a user.
+	• usermod : Modifies a user account.
+	• groupadd : Creates a new group.
+	• groupdel : Deletes a group.
+	• groups : Shows groups a user belongs to.
+	• id : Shows user and group IDs.
+
+Network Configuration and Monitoring
+	• ifconfig : Displays or configures network interfaces (older tool).
+	• ip : Replaces ifconfig for network management.
+	• ping : Checks connectivity to another host.
+	• netstat : Displays network connections and stats.
+	• ss : Shows socket statistics (faster replacement for netstat).
+	• traceroute : Tracks path to a remote host.
+	• ssh : Connects to a remote machine securely.
+	• nc : Reads/writes data over network (netcat).
+
+Package Management
+	• apt:get / apt : Package manager for Debian/Ubuntu systems.
+	• yum : Package manager for older Red Hat/CentOS systems.
+	• dnf : Improved yum for newer Red Hat:based systems.
+	• rpm : Manages RPM packages directly.
+	• dpkg : Installs/removes .deb packages on Debian:based systems.
+	• snap : Installs and manages snap packages.
+	• zypper : Package manager for openSUSE.
+
 
