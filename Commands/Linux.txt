@@ -1,0 +1,24 @@
+Whether you're a beginner or a seasoned pro, mastering Linux commands is non-negotiable for any developer or DevOps engineer.
+
+Here’s a quick and visually organized cheat sheet of important Linux commands to boost your productivity ⬇️
+
+📂 File and Directory Management
+- ls, pwd, cd, mkdir, touch, cp, mv, rm
+
+📝 File Viewing and Editing
+- cat, less, more, nano, vim, gedit
+
+⚙️ Process Management
+- ps, top, kill, killall, pstree, htop
+
+💻 System Information
+- uname, df, du, free, lscpu, lsbw, lsblk
+
+👥 User and Group Management
+- passwd, useradd, userdel, usermod, groupadd, groupdel, groups, id
+
+🌐 Network Configuration and Monitoring
+- ifconfig, ip, ping, netstat, ss, traceroute, ssh, nc
+
+📦 Package Management
+- apt-get, apt, yum, dnf, rpm, dpkg, snap, zyper
