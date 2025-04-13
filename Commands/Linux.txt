@@ -1,10 +1,11 @@
 File and Directory Management
-•	ls : Lists files and directories.
-o	ls  -l : display files in alphabetical order
-o	ls  -lr : display files in reverse of alphabetical order
-o	ls  -lt : display latest files on top
-o	ls  -ltr : display old files on top
-o	ls  -la : display hidden files
+
+	•	ls : Lists files and directories.
+		o	ls  -l : display files in alphabetical order
+		o	ls  -lr : display files in reverse of alphabetical order
+		o	ls  -lt : display latest files on top
+		o	ls  -ltr : display old files on top
+		o	ls  -la : display hidden files
 •	pwd : Shows the current working directory path.
 •	cd : Changes the current directory.
 o	cd <dir-name> : To go inside directory
