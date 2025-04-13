@@ -22,7 +22,8 @@ File and Directory Management
 		o rm a*.txt : Deletes all .txt files starting with "a".
 		o rm -rf <dir-name> : Forcefully deletes a directory and its contents recursively.
 
-### File Viewing and Editing
+File Viewing and Editing
+
 	• cat : To create file with data + append data to existing file + view file data
 		o cat > f1.txt : •  Creates a new file f1.txt and allows you to type content into it (overwrites if file exists).
 		o cat >> f1.txt : Appends typed content to the end of f1.txt.
@@ -52,4 +53,23 @@ File and Directory Management
 		o wc f1.txt  (no.of lines, no.of words, no.of chars)
 	• diff : To see difference between 2 files
 	• whoami: Shows which user is logged in
+
+Process Management
+
+	• ps : Lists running processes.
+		o ps -a : List all process on system
+		o ps -aux :
+			 a - running Process under all users
+			 u - detailed information of Particular user
+			 x - all process which is running in background
+		o ps -lux : Long listing without user lookup
+	• top : Real:time view of system processes.
+	• kill : Sends a signal to terminate a process.
+		o -15 terminate properly
+		o -9 terminate forcefully
+		o kill - signal PID (PID - Process id)
+			 kill -9 or -15 PID
+	• killall : Terminates all processes by name.
+	• pstree : Shows processes in a tree format.
+	• htop : Interactive process viewer (like top with UI).
 
