@@ -114,5 +114,19 @@ Package Management
 	• dpkg : Installs/removes .deb packages on Debian:based systems.
 	• snap : Installs and manages snap packages.
 	• zypper : Package manager for openSUSE.
+	• wget : It is used to download files from internet
+
+Archiving & taking backup or copying
+
+	• tar [option] [archive file] [file/dir to be archive]
+		o -c : this creates an archive files.
+		o -x : this option extracts the archive files.
+		o -f : specifies the filenm of the archive file.
+		o -v : this Prints Verbose information for any for operation on the terminal.
+		o -t : this lists all the files inside on archive file.
+		o -u : this archive a file or dir located inside afar file.
+		o -z : Creates a tor file using gzip Compression.
+		o -j : create an archive file using the bzip2 Compression.
+		o -w : verifies the integrity of an archive file ensuring its contents are not corrupted.
 
 
