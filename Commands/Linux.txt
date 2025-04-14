@@ -132,4 +132,30 @@ Archiving & taking backup or copying
 		o -j : create an archive file using the bzip2 Compression.
 		o -w : verifies the integrity of an archive file ensuring its contents are not corrupted.
 
+File Permissions & Ownership
+	• chmod 755 <file> : Change file permissions
+		o chmod u+x <file> : Grant execute permission to user
+		o chmod g-w <file> : Remove write permission from group
+		o chmod o+r <file> : Grant execute permission to others
+	• chown <user>:<group> <file> : Change ownership
+	• chown -R <user>:<group> <file> : Change ownership recursively.
+
+Crontab (Task Scheduling)
+	• crontab -e : Edit crontab
+	• crontab -l : List crontab jobs
+	• Example:
+		o 0 * * * * /path-to-script.sh : Runs every hour
+		o @reboot / path-to-script.sh : Runs on startup
+
+
+Mounting & Unmounting File Systems
+	• mount : Show mounted file systems
+	• mount /dev/sdX/mnt : Mount a device
+	• umount /mnt : Unmount a device
+	• fsck /dev/sdX : Check and repair a filesystems
+	• mkfs.ext4 /dev/sdX : Format a partition as ext4
+	• fdisk -l : List all partitions
+	• fdisk /dev/sdX : Manage partitions on a disk
+	• parted /dev/sdX : Create and resize partitions
+
 
