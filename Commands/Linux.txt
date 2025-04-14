@@ -105,6 +105,7 @@ Network Configuration and Monitoring
 	• traceroute : Tracks path to a remote host.
 	• ssh : Connects to a remote machine securely.
 	• nc : Reads/writes data over network (netcat).
+	• nmcli : Command line client for Network Manager.
 
 Package Management
 	• apt:get / apt : Package manager for Debian/Ubuntu systems.
@@ -115,6 +116,8 @@ Package Management
 	• snap : Installs and manages snap packages.
 	• zypper : Package manager for openSUSE.
 	• wget : It is used to download files from internet
+	• curl : Command line tool for transferring data with the URL syntax.
+	• hostname : Show or set the systems hostname.
 
 Archiving & taking backup or copying
 
