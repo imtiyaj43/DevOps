@@ -26,7 +26,7 @@ terraform workspace delete <name> : Deletes the specified workspace.
 
 terraform state list : Lists all resources managed in the current state file.
 
-terraform state show <resource> : Displays detailed information about a specific resource in the state file.
+terraform state show <resource_type>.<resource_name>> : Displays detailed information about a specific resource in the state file.
 
 terraform output : Displays values of the output variables defined in the configuration.
 
@@ -41,4 +41,3 @@ terraform untaint <resource> : Removes the taint mark from a resource.
 terraform show : Displays the details of the Terraform state or plan.
 
 terraform graph : Generates a visual graph of the Terraform configuration.
-
