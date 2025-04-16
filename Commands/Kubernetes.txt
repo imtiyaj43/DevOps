@@ -1,0 +1,37 @@
+Pod Command:
+	• kubectl get pod : Get pod
+	• kubectl get pod -o wide : Get pod wide information
+	• kubectl get pod -w : Get pod with watch
+	• kubectl edit pod <pod_name> : Edit pod
+	• kubectl describe pod <pod_name> : Describe pod
+	• kubectl delete pod <pod_name> : Delete pod
+	• kubectl logs pod <pod_name> : Logs of the pod
+	• kubectl exec -it pod <pod_name> /bin/bash : Execute into (inside) pod
+
+Node Commands:
+	• kubectl describe node <node_name> : Describe Node
+	• kubectl get node <node_name> -o yaml : Get node in yaml
+	• kubectl get node <node_name> : Get node
+	• kubectl drain node <node_name> : Drain Node
+	• kubectl cordon node <node_name> : Cordon node
+	• kubectl uncordon node <node_name> : Uncordon node
+
+Creating Objects:-
+	• kubectl apply -f <file_name>.yaml : Create resource
+	• kubectl apply -f <file1>.yaml -f <file2>.yaml : Create from multiple files
+	• kubectl apply -f ./<directory_name> : Create all resources from YAML files in a directory:
+	• kubectl apply -f https://<url> : Create from remote url
+	• kubectl run <pod_name> --image = <image_name> : Create pod
+	• kubectl run <pod_name> --image = <image_name> --port= <port> --expose : Create pod, then expose it as service
+	• kubectl run <pod_name> --image = <image_name>  --dry-run-client -o yaml > <file_name>.yaml : Generate Pod YAML file (client-side dry-run)
+	• kubectl create deployment <deployment_name>  --image=<image_name> : Create Deployment
+	• kubectl create deployment <deployment_name> --image=<image_name>--dry-run-client -o yaml > <file_name>.yaml : Generate Deployment YAML file (client-side dry-run)
+	• kubectl expose deployment <deployment_name> --type=<service-type> --port=<port> --target-port=<target_port> : Create a Service of a specific type (e.g., ClusterIP, NodePort)
+	• kubectl create service <service-type> <service_name> --tcp=<port>:<target_port> --dry-run=client -o yaml > <file_name>.yaml : Create Service YAML File (dry-run)
+	• kubectl expose <pod/deployment> <name> --type=<service-type> --port=<port> --target-port=<target_port> : Expose a Pod or Deployment as a Service
+	• kubectl create configmap <configmap_name> --from-literal=<key1>=<value1> --from-literal=<key2>=<value2> : Create ConfigMap from Key-Value pairs (inline)
+	• kubectl create configmap <configmap_name> --from-file=<file_name> : Create ConfigMap from a file
+	• kubectl create configmap <configmap_name> --from-env-file=<file_name> : Create ConfigMap from an environment file
+	• kubectl create secret generic <secret_name> --from-literal=<key1>=<value1> --from-literal=<key2>=<value2> : Create Secret from Key-Value pairs
+	• kubectl create secret generic <secret_name> --from-file=<file_name> : Create Secret from a file
+
