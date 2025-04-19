@@ -65,3 +65,32 @@ Ingress Commands:-
 	• kubectl describe ingress <ingress_name> : Describe ingress
 	• kubectl delete ingress <ingress_name> : Delete ingress
 
+Endpoints Commands:-
+	• kubectl get endpoints <endpoints_name> : Get endpoints
+
+DaemonSet Commands:-
+	• kubectl get daemonset < daemonset_name> : Get Daemonset
+	• kubectl get daemonset <daemonset_name> -o yaml : Get Daemonset in YAML format
+	• kubectl edit daemonset <daemonset_name> : Edit Daemonset
+	• kubectl describe daemonset <daemonset_name> : Describe Daemonset
+	• kubectl delete daemonset <daemonset_name> : Delete Daemonset
+
+Job Commands:-
+	• kubectl get job <job_name> : Get Job
+	• kubectl get job <job_name> -o yaml : Get Job in YAML format
+	• kubectl edit job <job_name> : Edit Job
+	• kubectl describe job <job_name> : Describe Job
+	• kubectl delete job <job_name> : Delete Job
+
+Rollout Commands:-
+	• kubectl rollout restart deployment <deployment_name> : Restart Deployment
+	• kubectl rollout undo deployment <deployment_name> : Undo Deployment with the Latest Revision
+	• kubectl rollout undo deployment <deployment_name> --to-revision=<revision_number> : Undo Deployment with Specified Revision
+	• kubectl rollout history deployment <deployment_name> --revision=<revision_number> : Get Specified revision of deployments
+
+Secret Commands:-
+	• kubectl get secret <secret_name> : Get Secret
+	• kubectl describe secret <secret_name> : Describe Secret
+	• kubectl delete secret <secret_name> : Delete Secret
+	• kubectl edit secret <secret_name> : Edit Secret
+
