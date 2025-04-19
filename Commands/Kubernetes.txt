@@ -35,3 +35,18 @@ Creating Objects:-
 	• kubectl create secret generic <secret_name> --from-literal=<key1>=<value1> --from-literal=<key2>=<value2> : Create Secret from Key-Value pairs
 	• kubectl create secret generic <secret_name> --from-file=<file_name> : Create Secret from a file
 
+
+Monitoring Usage  Commands:-
+	• kubectl top node <node_name> : Get node CPU and Memory Utilization
+	• kubectl top pod <pods_name> : Get pod CPU and Memory Utilization
+
+Deployment Commands:-
+	• kubectl get deployment <deployment_name> : Get Deployment
+	• kubectl get deployment <deployment_name> -o yaml : Get Deployment in YAML format
+	• kubectl get deployment <deployment_name> -o wide : Get Deployment in wide information
+	• kubectl edit deployment <deployment_name> : Edit Deployment
+	• kubectl describe deployment <deployment_name> : Describe Deployment
+	• kubectl delete deployment <deployment_name> : Delete Deployment
+	• kubectl scale deployment <deployment_name> --replicas=<replicas> : Scale Deployment with replicas
+
+Service Commands:-
