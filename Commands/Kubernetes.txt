@@ -50,3 +50,18 @@ Deployment Commands:-
 	• kubectl scale deployment <deployment_name> --replicas=<replicas> : Scale Deployment with replicas
 
 Service Commands:-
+	• kubectl get service <service> : Get service
+	• kubectl get service <service> -o yaml : Get service in YAML format
+	• kubectl get service <service> -o wide : Get service in Wide Information
+	• kubectl edit service <service> : Edit service
+	• kubectl describe service <service> : Describe service
+	• kubectl delete service <service> : Delete service
+
+Ingress Commands:-
+	• kubectl get ingress : Get ingress
+	• kubectl get ingress -o yaml : Get ingress in YAML format
+	• kubectl get ingress -o wide : Get ingress in Wide Information
+	• kubectl edit ingress <ingress_name> : Edit ingress
+	• kubectl describe ingress <ingress_name> : Describe ingress
+	• kubectl delete ingress <ingress_name> : Delete ingress
+
