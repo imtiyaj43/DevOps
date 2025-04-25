@@ -21,9 +21,9 @@ Creating Objects:-
 	• kubectl apply -f <file1>.yaml -f <file2>.yaml : Create from multiple files
 	• kubectl apply -f ./<directory_name> : Create all resources from YAML files in a directory:
 	• kubectl apply -f https://<url> : Create from remote url
-	• kubectl run <pod_name> --image = <image_name> : Create pod
-	• kubectl run <pod_name> --image = <image_name> --port= <port> --expose : Create pod, then expose it as service
-	• kubectl run <pod_name> --image = <image_name>  --dry-run-client -o yaml > <file_name>.yaml : Generate Pod YAML file (client-side dry-run)
+	• kubectl run <pod_name> --image=<image_name> : Create pod
+	• kubectl run <pod_name> --image=<image_name> --port= <port> --expose : Create pod, then expose it as service
+	• kubectl run <pod_name> --image=<image_name>  --dry-run-client -o yaml > <file_name>.yaml : Generate Pod YAML file (client-side dry-run)
 	• kubectl create deployment <deployment_name>  --image=<image_name> : Create Deployment
 	• kubectl create deployment <deployment_name> --image=<image_name>--dry-run-client -o yaml > <file_name>.yaml : Generate Deployment YAML file (client-side dry-run)
 	• kubectl expose deployment <deployment_name> --type=<service-type> --port=<port> --target-port=<target_port> : Create a Service of a specific type (e.g., ClusterIP, NodePort)
