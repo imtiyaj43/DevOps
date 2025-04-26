@@ -1,113 +1,109 @@
 Docker Images
-1.	docker image - Lists all images on the local system.
-
-2.	docker pull <image-name>:<tag> - Downloads an image from Docker Hub (use latest for the latest version).
-a.	Example: docker pull ubuntu:latest
-b.	Explanation: This command downloads the latest version of the Ubuntu image.  
-
-3.	docker rmi <image-name>:<tag> - Removes a specific image.
-a.	Example: docker rmi ubuntu:latest
-b.	Explanation: This removes the Ubuntu image with the latest tag.
-
-4.	docker image prune - Removes all unused images.
-
-5.	docker image prune -a - Removes all unused images, including untagged ones.
+	1. docker image - Lists all images on the local system.
+	2. docker pull <image-name>:<tag> - Downloads an image from Docker Hub (use latest for the latest version).
+		a. Example: docker pull ubuntu:latest
+		b. Explanation: This command downloads the latest version of the Ubuntu image.  
+	3. docker rmi <image-name>:<tag> - Removes a specific image.
+		a. Example: docker rmi ubuntu:latest
+		b. Explanation: This removes the Ubuntu image with the latest tag.
+	4. docker image prune - Removes all unused images.
+	5. docker image prune -a - Removes all unused images, including untagged ones.
 
 Docker Containers
-1.	docker run hello-world - Runs the hello-world container, displaying a welcome message
-2.	docker ps - Lists all running containers.
-3.	docker ps -a - Lists all containers, including stopped ones.
-4.	docker stop <container-id or name> - Stops a running container.
-5.	docker start <container-id or name> - Starts a stopped container.
-6.	docker restart <container-id or name> - Restarts a container.
-7.	docker rm <container-id or name> - Removes a stopped container.
-8.	docker rm -f <container-id or name> - Forces removal of a running container.
-9.	docker run -d <image-name> - Runs a container in the background (detached mode).
-10.	docker run -it <image-name>/bin/bash - Runs a container and opens an interactive terminal.
-11.	docker run -p <host-port>:<container-port> <image-name> - Maps a container's port to a host port.
-12.	docker logs <container-id> - Views logs for a specific container.
-13.	docker logs -f <container-id> - Follows logs in real-time.
+	1. docker run hello-world - Runs the hello-world container, displaying a welcome message
+	2. docker ps - Lists all running containers.
+	3. docker ps -a - Lists all containers, including stopped ones.
+	4. docker stop <container-id or name> - Stops a running container.
+	5. docker start <container-id or name> - Starts a stopped container.
+	6. docker restart <container-id or name> - Restarts a container.
+	7. docker rm <container-id or name> - Removes a stopped container.
+	8. docker rm -f <container-id or name> - Forces removal of a running container.
+	9. docker run -d <image-name> - Runs a container in the background (detached mode).
+	10. docker run -it <image-name>/bin/bash - Runs a container and opens an interactive terminal.
+	11. docker run -p <host-port>:<container-port> <image-name> - Maps a container's port to a host port.
+	12. docker logs <container-id> - Views logs for a specific container.
+	13. docker logs -f <container-id> - Follows logs in real-time.
 
 
 
 Docker Network
-1.	docker network ls - Lists all Docker networks.
-2.	docker network create <driver> <network-name> - Creates a new Docker network with a specified driver.
-3.	docker network rm <network-name> - Removes a specific network.
-4.	docker network inspect <network-name> - Provides detailed information about a specific network.
+	1. docker network ls - Lists all Docker networks.
+	2. docker network create <driver> <network-name> - Creates a new Docker network with a specified driver.
+	3. docker network rm <network-name> - Removes a specific network.
+	4. docker network inspect <network-name> - Provides detailed information about a specific network.
 
 Docker Compose Setup
-1.	docker compose up - Creates and starts containers defined in a Compose file.
-2.	docker compose up -d - Runs containers in detached mode.
-3.	docker-compose start - Starts stopped containers defined in a Compose file.
-4.	docker-compose stop - Stops running containers defined in a Compose file.
-5.	docker compose down - Removes containers, networks, images, and volumes.
-6.	docker compose down --volumes - Removes containers and volumes.
-7.	docker compose ps - Lists containers defined in the Compose file.
-8.	docker compose logs - Views logs from containers in the Compose setup.
+	1. docker compose up - Creates and starts containers defined in a Compose file.
+	2. docker compose up -d - Runs containers in detached mode.
+	3. docker-compose start - Starts stopped containers defined in a Compose file.
+	4. docker-compose stop - Stops running containers defined in a Compose file.
+	5. docker compose down - Removes containers, networks, images, and volumes.
+	6. docker compose down --volumes - Removes containers and volumes.
+	7. docker compose ps - Lists containers defined in the Compose file.
+	8. docker compose logs - Views logs from containers in the Compose setup.
 
 Docker Volumes
-1.	docker volume create my-volume - Creates a new volume.
-2.	docker volume ls - Lists all volumes.
-3.	docker volume inspect my-volume - Shows details of a specific volume.
-4.	docker volume rm my-volume - Removes a specific volume.
-5.	docker volume prune - Removes all unused volumes.
-6.	docker run -it --rm -v myvolume:/myapp/ <container-name> - Creates and mounts a volume to persist data in a container.
+	1. docker volume create my-volume - Creates a new volume.
+	2. docker volume ls - Lists all volumes.
+	3. docker volume inspect my-volume - Shows details of a specific volume.
+	4. docker volume rm my-volume - Removes a specific volume.
+	5. docker volume prune - Removes all unused volumes.
+	6. docker run -it --rm -v myvolume:/myapp/ <container-name> - Creates and mounts a volume to persist data in a container.
 
 Docker Swarm
-1.	docker swarm init - Initializes Docker Swarm mode, enabling the creation of a Swarm cluster.
-2.	docker swarm join --token <token> <manager-IP>:<port> - Adds a worker node to a Swarm.
-3.	docker node ls - Lists all nodes in the Swarm.
-4.	docker swarm leave - Removes a node from the Swarm.
-5.	docker service create --name <service-name> <image-name> - Deploys a service on the Swarm.
-6.	docker service ls - Lists all services running in the Swarm.
-7.	docker service ps <service-name> - Shows the status of tasks in a service.
-8.	docker service scale <service-name>=<number-of-replicas> - Scales a service to the specified number of replicas.
-9.	docker stack deploy -c <compose-file> <stack-name> - Deploys a stack using a Docker Compose file in Swarm.
-10.	docker stack rm <stack-name> - Removes a deployed stack from the Swarm.
+	1. docker swarm init - Initializes Docker Swarm mode, enabling the creation of a Swarm cluster.
+	2. docker swarm join --token <token> <manager-IP>:<port> - Adds a worker node to a Swarm.
+	3. docker node ls - Lists all nodes in the Swarm.
+	4. docker swarm leave - Removes a node from the Swarm.
+	5. docker service create --name <service-name> <image-name> - Deploys a service on the Swarm.
+	6. docker service ls - Lists all services running in the Swarm.
+	7. docker service ps <service-name> - Shows the status of tasks in a service.
+	8. docker service scale <service-name>=<number-of-replicas> - Scales a service to the specified number of replicas.
+	9. docker stack deploy -c <compose-file> <stack-name> - Deploys a stack using a Docker Compose file in Swarm.
+	10. docker stack rm <stack-name> - Removes a deployed stack from the Swarm.
 
 Dockerfile Commands
-1.	FROM <base-image> - Sets the base image for the Dockerfile.
-a.	Example: FROM ubuntu:20.04
-b.	Explanation: This sets the base image to Ubuntu 20.04 for building the container.
+	1. FROM <base-image> - Sets the base image for the Dockerfile.
+		a. Example: FROM ubuntu:20.04
+		b. Explanation: This sets the base image to Ubuntu 20.04 for building the container.
 
-2.	RUN <command> - Executes a command during image build and creates a new layer.
-a.	Example: RUN apt-get update && apt-get install -y python3
-b.	Explanation: This installs Python3 on the image by running the apt-get commands during the image build.
+	2. RUN <command> - Executes a command during image build and creates a new layer.
+		a. Example: RUN apt-get update && apt-get install -y python3
+		b. Explanation: This installs Python3 on the image by running the apt-get commands during the image build.
 
-3.	COPY <src> <dest> - Copies files or directories from the local filesystem to the container.
-a.	Example: COPY ./myapp /app
-b.	Explanation: Copies the myapp directory from the local filesystem to the /app directory inside the container.
+	3. COPY <src> <dest> - Copies files or directories from the local filesystem to the container.
+		a. Example: COPY ./myapp /app
+		b. Explanation: Copies the myapp directory from the local filesystem to the /app directory inside the container.
 
-4.	ADD <src> <dest> - Similar to COPY, but also supports URLs and tar extraction.
-a.	Example: ADD https://example.com/app.tar.gz /app/
-b.	Explanation: Downloads the app.tar.gz file from a URL and extracts it into the /app directory inside the container.
+	4. ADD <src> <dest> - Similar to COPY, but also supports URLs and tar extraction.
+		a. Example: ADD https://example.com/app.tar.gz /app/
+		b. Explanation: Downloads the app.tar.gz file from a URL and extracts it into the /app directory inside the container.
 
-5.	WORKDIR <directory> - Sets the working directory inside the container.
-a.	Example: WORKDIR /app
-b.	Explanation: Sets /app as the working directory for the following commands, so subsequent commands will run from there.
+	5. WORKDIR <directory> - Sets the working directory inside the container.
+		a. Example: WORKDIR /app
+		b. Explanation: Sets /app as the working directory for the following commands, so subsequent commands will run from there.
 
-6.	CMD ["<command>", "<arg1>", "<arg2>"] - Specifies the default command to run when a container starts.
-a.	Example: CMD ["python3", "app.py"]
-b.	Explanation: Sets the default command to run python3 app.py when the container starts.
+	6. CMD ["<command>", "<arg1>", "<arg2>"] - Specifies the default command to run when a container starts.
+		a. Example: CMD ["python3", "app.py"]
+		b. Explanation: Sets the default command to run python3 app.py when the container starts.
 
-7.	ENTRYPOINT ["<command>", "<arg1>", "<arg2>"] - Sets a fixed command for the container to run, even if other commands are specified.
-a.	Example: ENTRYPOINT ["python3", "app.py"]  
-b.	Explanation: Ensures that python3 app.py is always the main process when the container starts (even if other commands are provided).
+	7. ENTRYPOINT ["<command>", "<arg1>", "<arg2>"] - Sets a fixed command for the container to run, even if other commands are specified.
+		a. Example: ENTRYPOINT ["python3", "app.py"]  
+		b. Explanation: Ensures that python3 app.py is always the main process when the container starts (even if other commands are provided).
 
-8.	EXPOSE <port> - Opens a port in the container to allow external access.
-a.	Example: EXPOSE 8080
-b.	Explanation: Exposes port 8080, indicating the port the application will use and allowing it to be accessed by the host.
+	8. EXPOSE <port> - Opens a port in the container to allow external access.
+		a. Example: EXPOSE 8080
+		b. Explanation: Exposes port 8080, indicating the port the application will use and allowing it to be accessed by the host.
 
-9.	ENV <key>=<value> - Sets environment variables inside the container.
-a.	Example: ENV APP_ENV=production
-b.	Explanation: Sets the APP_ENV environment variable to production within the container.
+	9. ENV <key>=<value> - Sets environment variables inside the container.
+		a. Example: ENV APP_ENV=production
+		b. Explanation: Sets the APP_ENV environment variable to production within the container.
 
-10.	VOLUME <path> - Defines a mount point to store persistent data.
-a.	Example: VOLUME ["/data"]
-b.	Explanation: Creates a mount point at /data in the container, allowing data to persist outside the container.
+	10. VOLUME <path> - Defines a mount point to store persistent data.
+		a. Example: VOLUME ["/data"]
+		b. Explanation: Creates a mount point at /data in the container, allowing data to persist outside the container.
 
-11.	USER <username> - Specifies the user under which the container should run.
-a.	Example: USER node
-b.	Explanation: Specifies that the container should run as the node user, rather than the default root user.
+	11. USER <username> - Specifies the user under which the container should run.
+		a. Example: USER node
+		b. Explanation: Specifies that the container should run as the node user, rather than the default root user.
 
