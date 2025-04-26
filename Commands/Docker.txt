@@ -8,6 +8,9 @@ Docker Images
 		b. Explanation: This removes the Ubuntu image with the latest tag.
 	4. docker image prune - Removes all unused images.
 	5. docker image prune -a - Removes all unused images, including untagged ones.
+	6. docker image inspect <image> : Display detailed information about an image.
+	7. docker history <image> : Show history of an image
+	8. docker save <image> > <file.tar> : Save an image to a tar archive.
 
 Docker Containers
 	1. docker run hello-world - Runs the hello-world container, displaying a welcome message
@@ -23,6 +26,9 @@ Docker Containers
 	11. docker run -p <host-port>:<container-port> <image-name> - Maps a container's port to a host port.
 	12. docker logs <container-id> - Views logs for a specific container.
 	13. docker logs -f <container-id> - Follows logs in real-time.
+	14. docker build -t <name>:<tag> . - Build image from Dockerfile in current directory.
+	15. docker build -f <file> . - Build image from specific Dockerfile.
+	16. docker tag <image> <new-image> - Create a tag for an image.
 
 
 
