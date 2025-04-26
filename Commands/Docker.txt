@@ -1,5 +1,5 @@
 Docker Images
-	1. docker image - Lists all images on the local system.
+	1. docker images - Lists all images on the local system.
 	2. docker pull <image-name>:<tag> - Downloads an image from Docker Hub (use latest for the latest version).
 		a. Example: docker pull ubuntu:latest
 		b. Explanation: This command downloads the latest version of the Ubuntu image.  
